@@ -6,7 +6,7 @@ import {
   IPokemonInfo,
   IPokemonDetails,
 } from "../../types";
-import { GetMorePokemonsButton } from "../NextPokemonsButton";
+import { GetMorePokemonsButton } from "../GetMorePokemonsButton";
 import { Pokemon } from "../Pokemon/Pokemon";
 import { PokemonListStyled } from "./PokemonList.styled";
 
