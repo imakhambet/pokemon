@@ -7,7 +7,10 @@ import {
   IPokemonDetails,
 } from "../../types";
 import { Pokemon } from "../Pokemon/Pokemon";
-import { GetMorePokemonsButtonStyled, PokemonListStyled } from "./PokemonList.styled";
+import {
+  GetMorePokemonsButtonStyled,
+  PokemonListStyled,
+} from "./PokemonList.styled";
 
 export const PokemonList = () => {
   const [pokemons, setPokemons] = useState<IPokemon[]>([]);
@@ -19,7 +22,6 @@ export const PokemonList = () => {
         ? await api.fetchPokemons()
         : await api.fetchMorePokemons(nextUrl);
       const responseData: IFetchPokemonResponse = response.data;
-      console.log(responseData);
       responseData.results.forEach((pokemon) => {
         getPokemonData(pokemon).then((pokemonData) => {
           if (pokemonData) {
@@ -58,7 +60,9 @@ export const PokemonList = () => {
           <Pokemon key={pokemon.info.name} pokemon={pokemon} />
         ))}
       </PokemonListStyled>
-      <GetMorePokemonsButtonStyled onClick={() => getData(false)}>Get more pokemons</GetMorePokemonsButtonStyled>
+      <GetMorePokemonsButtonStyled onClick={() => getData(false)}>
+        Get more pokemons
+      </GetMorePokemonsButtonStyled>
     </>
   );
 };

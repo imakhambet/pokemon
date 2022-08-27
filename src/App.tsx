@@ -1,10 +1,8 @@
-import React from 'react';
-import { PokemonList } from './components/PokemonList';
+import React from "react";
+import { PokemonList } from "./components/PokemonList";
 
 export const App = () => {
-  return (
-    <PokemonList/>
-  );
-}
+  return <PokemonList />;
+};
 
 export default App;
